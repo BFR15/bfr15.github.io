@@ -15,11 +15,13 @@
       background-color: #f9f9f9;
       color: #333;
       line-height: 1.6;
+      animation: fadeIn 1s ease-in-out;
     }
     .container {
       max-width: 900px;
       margin: 0 auto;
       padding: 20px;
+      animation: slideIn 1s ease-in-out;
     }
     header {
       display: flex;
@@ -27,6 +29,7 @@
       gap: 20px;
       text-align: center;
       margin-bottom: 30px;
+      animation: fadeIn 1s ease-in-out;
     }
     .logo {
       flex-shrink: 0;
@@ -35,18 +38,22 @@
       border-radius: 50%;
       object-fit: cover;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      animation: pulse 2s infinite;
     }
     .header-text {
       text-align: left;
+      animation: fadeIn 1s ease-in-out;
     }
     h1 {
       color: #2c3e50;
       font-size: 2.2rem;
       margin-bottom: 10px;
+      animation: fadeIn 1s ease-in-out;
     }
     .subtitle {
       color: #7f8c8d;
       font-size: 1.1rem;
+      animation: fadeIn 1s ease-in-out;
     }
     section {
       background: white;
@@ -54,6 +61,7 @@
       padding: 25px;
       margin-bottom: 25px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      animation: slideIn 1s ease-in-out;
     }
     h2 {
       color: #2980b9;
@@ -61,15 +69,18 @@
       margin-bottom: 15px;
       border-bottom: 2px solid #3498db;
       padding-bottom: 5px;
+      animation: fadeIn 1s ease-in-out;
     }
     ul {
       list-style-type: none;
       padding-left: 0;
+      animation: fadeIn 1s ease-in-out;
     }
     li {
       margin: 12px 0;
       display: flex;
       align-items: center;
+      animation: fadeIn 1s ease-in-out;
     }
     li::before {
       content: "•";
@@ -77,6 +88,7 @@
       font-weight: bold;
       margin-right: 12px;
       font-size: 1.2rem;
+      animation: fadeIn 1s ease-in-out;
     }
     .contact-email {
       display: inline-block;
@@ -88,6 +100,7 @@
       border-radius: 6px;
       font-weight: bold;
       transition: background-color 0.3s;
+      animation: fadeIn 1s ease-in-out;
     }
     .contact-email:hover {
       background-color: #219653;
@@ -97,6 +110,7 @@
       margin-top: 30px;
       color: #7f8c8d;
       font-size: 0.9rem;
+      animation: fadeIn 1s ease-in-out;
     }
     @media (max-width: 768px) {
       header {
@@ -116,6 +130,19 @@
       section {
         padding: 20px;
       }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes slideIn {
+      from { transform: translateX(-20px); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
     }
   </style>
 </head>
@@ -199,7 +226,7 @@
     </section>
 
     <footer>
-      &copy; 2025 Благотворительный фонд «Развитие». Все права защищены.
+      © 2025 Благотворительный фонд «Развитие». Все права защищены.
     </footer>
   </div>
 </body>

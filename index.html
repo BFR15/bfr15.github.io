@@ -22,8 +22,22 @@
       padding: 20px;
     }
     header {
+      display: flex;
+      align-items: center;
+      gap: 20px;
       text-align: center;
       margin-bottom: 30px;
+    }
+    .logo {
+      flex-shrink: 0;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+    .header-text {
+      text-align: left;
     }
     h1 {
       color: #2c3e50;
@@ -85,6 +99,14 @@
       font-size: 0.9rem;
     }
     @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+      .logo {
+        width: 60px;
+        height: 60px;
+      }
       h1 {
         font-size: 1.8rem;
       }
@@ -100,19 +122,24 @@
 <body>
   <div class="container">
     <header>
-      <h1>Благотворительный фонд «Развитие»</h1>
-      <p class="subtitle">Поддержка образовательной среды гимназии № 15 г. Костромы</p>
+      <img src="https://sun4-20.userapi.com/s/v1/ig2/2E13Rbz6Z1aaM0DbdTXXcK7GhXEefj0NRSbqlLVbzX6o-PotRHAwegBOP3STFlBcKQbT_KVKqVAgJtGn1VH8MyMF.jpg?quality=95&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720,1000x1000&from=bu&cs=1000x0"
+           alt="Логотип БФ «Развитие»"
+           class="logo">
+      <div class="header-text">
+        <h1>Благотворительный фонд «Развитие»</h1>
+        <p class="subtitle">Поддержка образовательной среды гимназии № 15 г. Костромы</p>
+      </div>
     </header>
 
     <section>
       <h2>Общая информация</h2>
       <ul>
         <li><strong>Дата регистрации:</strong> 6 марта 2007 года</li>
-        <li><strong>Адрес:</strong> Кострома, ул. Шагова, д. 201, офис 1</li>
+        <li><strong>Адрес:</strong> Кострома, ул. Шагова, д. 201, офис 1</li>
       </ul>
       <p>
         БФ «Развитие» — зарегистрированная некоммерческая организация. 
-        Наша цель — не получение прибыли, а поддержка образовательной среды: 
+        Наша цель — не получение прибыли, а поддержка образовательной среды:
         улучшение условий обучения, развитие инфраструктуры и помощь детям и учителям.
       </p>
     </section>
